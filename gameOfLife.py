@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as npy
 import time
 import pygame as pg 
 
