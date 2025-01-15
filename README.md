@@ -25,9 +25,12 @@ To run this project, you need:
 ### Running the Game
 1. Clone or download this repository to your local machine.
 2. Navigate to the directory containing the script.
-3. Run the script using Python: "python game_of_life.py"
+3. Run the script using Python:
+   ```bash
+   python game_of_life.py
+   ```
 
-4. Once the game starts, you can:
+5. Once the game starts, you can:
    - Click with the left mouse button to set initial live cells.
    - Press the `SPACE` key to start or pause the simulation.
    - Close the window to exit the game.
