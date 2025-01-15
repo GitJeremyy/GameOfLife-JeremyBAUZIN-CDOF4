@@ -12,12 +12,10 @@ def update(screen, cells, size):
         alive = np.sum(cells[row-1:row+2, col-1:col+2]) - cells[row, col]
         color= color_background if cells[row, col]==0 else color_alive
 
-        if cells[row, col] == 1:
-            if alive == 2 or alive == 3:
-                updated_cells[row, col] = 1
-        else:
-            if alive == 3:
-                updated_cells[row, col] = 1
+        if cells[row, col] == 1 and (alive == 2 or alive == 3):
+            updated_cells[row, col] = 1
+        elif alive==3:
+            updated_cells[row, col] = 1
         pg.draw.rect(screen, color, (col*size, row*size, size-1, size-1))   
     return updated_cells
 
