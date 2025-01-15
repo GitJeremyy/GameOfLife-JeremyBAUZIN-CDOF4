@@ -7,6 +7,17 @@ color_grid = (40, 40, 40)
 color_alive = (255, 255, 255)
 
 def update(screen, cells, size):
+    """
+    Met à jour l'état des cellules et dessine les nouvelles cellules.
+
+    Args:
+        screen: Surface de pygame pour afficher le jeu.
+        cells: Grille numpy représentant les cellules.
+        size: Taille des cellules en pixels.
+
+    Returns:
+        Grille numpy mise à jour.
+    """
     updated_cells=np.zeros((cells.shape[0], cells.shape[1])) 
     for row, col in np.ndindex(cells.shape):
         alive = np.sum(cells[row-1:row+2, col-1:col+2]) - cells[row, col]
